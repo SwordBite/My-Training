@@ -1,6 +1,8 @@
-let a = 10,
-    b = 5
-let c = a + b
-console.log(c)
+function sum(a, b) {
+    let result = a + b;
+    console.log(result)
+}
 
-//хз как обернуть в функцию...
+sum(5, 10);
+
+//Ура, оно работает))

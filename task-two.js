@@ -1,8 +1,12 @@
-let userName = 'Swordbite';
-
-function greet(userName) {
+function greet() {
+    let user = 'Swordbite'
+    let greeting = 'Привет, ' + user;
+    console.log(greeting);
 
 }
-console.log();
+
+greet();
+
+
 
 //я даун :)
