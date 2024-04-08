@@ -1,4 +1,5 @@
 function convertCelsiusToFarenheit(celsius) {
-    console.log((celsius * 9 / 5) + 32);
+    result = (celsius * 9 / 5) + 32;
+    console.log(result);
 }
-convertCelsiusToFarenheit(0)
+convertCelsiusToFarenheit(10)
