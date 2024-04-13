@@ -1,0 +1,40 @@
+#countLabel {
+    display: block;
+    text-align: center;
+    font-size: 150px;
+    font-family: Helvetica;
+    color: rgb(238, 238, 238);
+}
+
+#buttonContainer {
+    text-align: center;
+
+}
+
+#headline {
+    text-align: center;
+    font-size: 40px;
+    font-family: Helvetica;
+    color: rgb(238, 238, 238);
+}
+
+.buttons {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Helvetica;
+    color: rgb(238, 238, 238);
+    background-color: rgb(12, 13, 26);
+    border-radius: 5px;
+    border-style: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons:hover {
+    background-color: rgb(8, 11, 48);
+}
+
+.darkTheme {
+    background-color: rgb(34, 40, 49);
+}

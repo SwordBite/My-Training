@@ -5,4 +5,14 @@
 // }
 
 // Самостоятельно написать поиск максиального числа в массиве
+
+function findMax() {
+    const numbers = [100, 250, 32, 4, 18];
+    for (let index = 0; index < 4, index++) {
+        if () {
+
+        }
+    }
+
+}
 findMax()
