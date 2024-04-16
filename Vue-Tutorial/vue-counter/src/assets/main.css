@@ -1,0 +1,37 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: auto;
+  font-weight: normal;
+}
+
+.button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: Helvetica;
+  color: rgb(238, 238, 238);
+  background-color: rgb(11, 15, 65);
+  border-radius: 5px;
+  border-style: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.counter {
+  display: block;
+  text-align: left;
+  font-size: 150px;
+  font-family: Helvetica;
+  color: rgb(238, 238, 238);
+}
+
+.headline {
+  display: block;
+  text-align: left;
+  font-size: 70px;
+  font-family: Helvetica;
+  color: rgb(238, 238, 238);
+}
