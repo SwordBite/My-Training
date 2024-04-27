@@ -11,9 +11,17 @@ const counter = ref(0);
   <h2 class="counter">{{ counter }}</h2><br>
   <div>
     <!-- Сообщение родительскому компоненту что ему делать -->
-    <CounterButton @decrement="counter--" @increment="counter++" @reset="counter = 0" />
+    <CounterButton name="Decrease" actionType="decrement" @decrement="counter--" />
+    <CounterButton name="Reset" actionType="reset" @reset="counter = 0" />
+    <CounterButton name="Increase" actionType="increment" @increment="counter++" />
   </div>
 </template>
+
+<!-- С использованием props сделать передачу события -->
+<!-- <CounterButton :nameProp="decrement" @decrement="counter--"/>
+<CounterButton @increment="counter++"/>
+<CounterButton @reset="counter = 0" /> -->
+
 
 <!-- <script setup>
 import { ref } from 'vue'

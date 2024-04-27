@@ -1,9 +1,11 @@
 <script setup>
-defineEmits(['decrement', 'reset', 'increment'])
+defineEmits(['increment', 'reset', 'decrement'])
+defineProps({
+    name: String,
+    actionType: String,
+})
 </script>
 <template>
     <!-- Генерация событий дочерним компонентом с помощью метода $emit -->
-    <button type="button" @click="$emit('decrement')" class="button">Decrease</button>
-    <button type="button" @click="$emit('reset')" class="button">Reset</button>
-    <button type="button" @click="$emit('increment')" class="button">Increase</button>
+    <button type="button" class="button" @click="$emit(actionType)"> {{ name }}</button>
 </template>
