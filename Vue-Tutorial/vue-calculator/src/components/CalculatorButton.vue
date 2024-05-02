@@ -23,6 +23,7 @@ defineProps({
     background-color: hsl(0, 5%, 20%);
     color: white;
     font-size: 25px;
+    font-family: Helvetica;
     cursor: pointer;
 
    
