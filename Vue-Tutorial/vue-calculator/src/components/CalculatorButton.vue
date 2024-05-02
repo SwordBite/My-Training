@@ -7,21 +7,31 @@ defineProps({
 
 <template>
     <div>
-        <button class="operator-btn">{{ name }}</button>
+        <button class="calculator-btn">{{ name }}</button>
     </div>
 </template>
 
 
 <style scoped>
-.operator-btn {
+
+.calculator-btn {
     margin: 5px;
     width: 70px;
     height: 70px;
     border-radius: 50px;
     border: none;
-    background-color: hsl(0, 5%, 22%);
+    background-color: hsl(0, 5%, 20%);
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     cursor: pointer;
+
+   
 }
+.calculator-btn:hover {
+    background-color: hsl(0, 5%, 40%);
+}
+.calculator-btn:active {
+    background-color: hsl(0, 5%, 60%);
+}
+
 </style>
