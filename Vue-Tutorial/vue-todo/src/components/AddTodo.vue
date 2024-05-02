@@ -10,6 +10,7 @@ const newTodo = ref('')
 function refreshInput() {
     newTodo.value = ''
 }
+
 </script>
 
 <template>
@@ -18,7 +19,6 @@ function refreshInput() {
             placeholder="What would you like to do?"></input>
         <button :disabled="isDisabled" class="addButton" @click="$emit('addItem', newTodo)">Add</button>
     </form>
-
 </template>
 
 <style scoped>

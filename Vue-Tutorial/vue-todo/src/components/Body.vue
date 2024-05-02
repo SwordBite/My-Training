@@ -8,7 +8,7 @@ const listItems = ref([])
 
 function addItem(value) {
 
-    if (value === '') {
+    if (!value) {
         return
     }
     listItems.value.push({ id: id++, value: value })
@@ -21,5 +21,5 @@ function removeItem(value) {
 
 <template>
     <AddTodo @addItem="addItem" :isDisabled="listItems.length >= 10" />
-    <ListItem :listItems=" listItems" @removeItem="removeItem" />
+    <ListItem :listItems="listItems" @removeItem="removeItem" />
 </template>
