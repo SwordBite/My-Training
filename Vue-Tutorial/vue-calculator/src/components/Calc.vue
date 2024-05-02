@@ -6,18 +6,21 @@ const calc = ref(0);
 
 <template>
     <div>
-        <input class="calc-input" readonly>{{ calc }}</input>
+        <form class="calc-input" readonly>{{ calc }}</form>
     </div>
 </template>
 
 <style scoped>
 .calc-input {
-    width: 340px;
+    width: 320px;
     height: 50px;
     border: none;
     border-radius: 15px;
     background-color: hsl(0, 5%, 22%);
-    font-size: 20px;
+    font-size: 25px;
+    font-family: Helvetica;
     color: white;
+    margin: 10px;
+    padding: 5px 10px 0px 10px;
 }
 </style>
