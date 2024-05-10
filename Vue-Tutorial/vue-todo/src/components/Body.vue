@@ -7,11 +7,15 @@ let id = 0;
 const listItems = ref([])
 
 function addItem(value) {
-
-    if (!value) {
+    const splitItems = value.split(',')
+    if (splitItems == []) {
         return
     }
-    listItems.value.push({ id: id++, value: value })
+
+    for (let index = 0; index < splitItems.length; index++) {
+        const element = splitItems[index];
+        listItems.value.push({ id: id++, value: element })
+    }
 }
 
 function removeItem(value) {
