@@ -2,12 +2,13 @@
 defineProps({
     buttonName: String,
 })
+
 </script>
 
 
 <template>
     <div>
-        <button class="pollButton">{{ buttonName }}</button>
+        <button @click="" class="pollButton">{{ buttonName }}</button>
     </div>
 </template>
 

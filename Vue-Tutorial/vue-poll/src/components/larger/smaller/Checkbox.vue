@@ -1,16 +1,20 @@
 <script setup>
-import CheckboxVariant from './lesser/CheckboxVariant.vue'
+import { ref } from 'vue';
 defineProps({
     paragraphName: String,
 
 })
+
+const picked = ref("Male")
+
 </script>
 
 <template>
     <div>
-        <p class="paragraph">{{ paragraphName }}</p>
-        <CheckboxVariant class="checkbox" variantName="Male" />
-        <CheckboxVariant class="checkbox" variantName="Female" />
+        <p class="paragraph">{{ paragraphName }} </p>
+        <p class="checkboxVariant"> <input type="radio" id="maleCheckbox" v-model="picked" value="Male" /> Male </p>
+        <p class="checkboxVariant"> <input type="radio" id="femaleCheckbox" v-model="picked" value="Female" /> Female
+        </p>
     </div>
 </template>
 
@@ -20,7 +24,7 @@ defineProps({
     font-size: 20px;
 }
 
-.checkbox {
+.checkboxVariant {
     color: white;
     font-size: 20px;
     padding: 5px 15px;
@@ -28,6 +32,10 @@ defineProps({
     background-color: rgb(1, 107, 58);
     border-radius: 5px;
     border: none;
-    max-width: 10%;
+    width: 150px;
+}
+
+input {
+    accent-color: rgb(2, 34, 20);
 }
 </style>

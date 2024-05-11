@@ -1,18 +1,22 @@
 <script setup>
-import SelectorOption from './lesser/SelectorOption.vue'
+import { ref } from 'vue';
 defineProps({
     comboLabel: String,
 })
+
+const selected = ref('')
+
 </script>
 
 <template>
     <div>
         <label class="comboLabel">{{ comboLabel }}</label> <br>
-        <select class="selector">
-            <SelectorOption optionName="Cats" />
-            <SelectorOption optionName="Dogs" />
-            <SelectorOption optionName="Parrots" />
-            <SelectorOption optionName="Rats" />
+        <select class="selector" v-model="selected">
+            <option class="selectorOption" disabled value="">Select one</option>
+            <option class="selectorOption">Cats</option>
+            <option class="selectorOption">Dogs</option>
+            <option class="selectorOption">Parrots</option>
+            <option class="selectorOption">Mice</option>
         </select>
     </div>
 </template>
@@ -30,6 +34,11 @@ defineProps({
     font-size: 20px;
     padding: 10px 15px 10px 15px;
     margin: 20px 0px 20px 0px;
+    color: white;
+}
+
+.selectorOption {
+    background-color: rgb(1, 107, 58);
     color: white;
 }
 </style>

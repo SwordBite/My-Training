@@ -1,13 +1,26 @@
 <script setup>
+import { ref, watch } from 'vue'
+
 defineProps({
     labelName: String,
 })
+
+const userInput = ref();
+
+const stop = watch(userInput, () => {
+    changeUserInput()
+    stop()
+})
+
+const changeUserInput = () => {
+    userInput.value = userInput.value + 'a';
+}
 </script>
 
 <template>
     <div>
-        <label class="inputLabel">{{ labelName }}</label> <br> <input class="inputBox" required
-            placeholder="Type in here..."></input>
+        <label class="inputLabel">{{ labelName }}</label> <br>
+        <input v-model="userInput" value="" class="inputBox" required placeholder="Type in here..."></input>
     </div>
 </template>
 
