@@ -1,19 +1,24 @@
 <script setup>
 import { ref } from 'vue';
+defineEmits([
+    'passPick'
+])
 defineProps({
     paragraphName: String,
 
 })
 
-const picked = ref("Male")
+const picked = ref('Female')
 
 </script>
 
 <template>
     <div>
         <p class="paragraph">{{ paragraphName }} </p>
-        <p class="checkboxVariant"> <input type="radio" id="maleCheckbox" v-model="picked" value="Male" /> Male </p>
-        <p class="checkboxVariant"> <input type="radio" id="femaleCheckbox" v-model="picked" value="Female" /> Female
+        <p class="checkboxVariant"> <input type="radio" id="maleCheckbox" v-model="picked" value="Female"
+                @click="$emit('passPick', picked)" /> Male </p>
+        <p class="checkboxVariant"> <input type="radio" id="femaleCheckbox" v-model="picked" value="Male"
+                @click="$emit('passPick', picked)" /> Female
         </p>
     </div>
 </template>

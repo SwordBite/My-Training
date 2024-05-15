@@ -1,26 +1,28 @@
 <script setup>
 import { ref, watch } from 'vue'
-
+defineEmits(['passInput'])
 defineProps({
     labelName: String,
 })
 
 const userInput = ref();
 
-const stop = watch(userInput, () => {
-    changeUserInput()
-    stop()
-})
+// const stop = watch(userInput, () => {
+//     changeUserInput()
+//     stop()
+// })
 
-const changeUserInput = () => {
-    userInput.value = userInput.value + 'a';
-}
+// const changeUserInput = () => {
+//     userInput.value = userInput.value + 'a';
+// }
 </script>
 
 <template>
     <div>
         <label class="inputLabel">{{ labelName }}</label> <br>
-        <input v-model="userInput" value="" class="inputBox" required placeholder="Type in here..."></input>
+        <input v-model="userInput" value="" class="inputBox" @input="$emit('passInput', userInput)" required
+            placeholder="Type in here...">
+        </input>
     </div>
 </template>
 

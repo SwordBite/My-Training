@@ -1,14 +1,18 @@
 <script setup>
 defineProps({
     buttonName: String,
+    isDisabled: Boolean,
 })
+defineEmits(['sendAnswers'])
+
+
 
 </script>
 
 
 <template>
     <div>
-        <button @click="" class="pollButton">{{ buttonName }}</button>
+        <button :disabled="isDisabled" class="pollButton" @click.once="$emit('sendAnswers')">{{ buttonName }}</button>
     </div>
 </template>
 

@@ -5,13 +5,12 @@ defineProps({
 })
 
 const selected = ref('')
-
 </script>
 
 <template>
     <div>
         <label class="comboLabel">{{ comboLabel }}</label> <br>
-        <select class="selector" v-model="selected">
+        <select class="selector" v-model="selected" @click="$emit('passSelect', selected)">
             <option class="selectorOption" disabled value="">Select one</option>
             <option class="selectorOption">Cats</option>
             <option class="selectorOption">Dogs</option>
