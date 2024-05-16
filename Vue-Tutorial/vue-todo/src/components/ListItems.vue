@@ -1,5 +1,4 @@
-<script setup>
-import DeleteButton from './DeleteButton.vue';
+<script setup>;
 defineProps({
     listItems: Array,
 })
