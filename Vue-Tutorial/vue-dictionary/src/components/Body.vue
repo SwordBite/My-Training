@@ -1,21 +1,51 @@
 <script setup>
 import AddWords from './AddWords.vue';
 import WordCard from './WordCard.vue';
-import { ref } from 'vue';
+import WordSearch from './WordSearch.vue';
+import { reactive } from 'vue';
 
-const word = ref('')
-const translation = ref('')
+const dictionary = reactive({})
 
 const addNewWords = (newWord, newTranslation) => {
-    word.value = newWord;
-    translation.value = newTranslation;
+    dictionary[newWord] = newTranslation;
 }
 </script>
 
 <template>
-    <AddWords @passWords="addNewWords" />
-    <WordCard :translationProp="translation" :wordProp="word" />
+    <div class="left-block">
+        <AddWords @passWords="addNewWords" />
+    </div>
+
+    <div class="righ-block">
+        <WordSearch />
+    </div>
+    <div class="left-block-bottom">
+        <WordCard v-for="(value, key) in dictionary" :wordProp="key" :translationProp="value" />
+    </div>
 </template>
 
 
-<style scoped></style>
+<style scoped>
+.left-block {
+    float: left;
+    display: block;
+    width: 300px;
+    border: none;
+}
+
+.right-block {
+    float: right;
+    display: block;
+    width: 300px;
+    border: none;
+}
+
+.left-block-bottom {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: block;
+    width: 300px;
+    border: none;
+}
+</style>

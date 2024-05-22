@@ -12,7 +12,8 @@ const translationInput = ref('')
         <label class="word-label">English: </label>
         <input v-model="wordInput" value="" class="word-input" required placeholder="Word"></input> <br>
         <label class="word-label">Russian: </label>
-        <input v-model="translationInput" value="" class="word-input" required placeholder="Translation"></input><br>
+        <input v-model="translationInput" value="" class="word-input" required placeholder="Translation"
+            @keydown.enter="$emit('passWords', wordInput, translationInput)"></input><br>
         <button @click="$emit('passWords', wordInput, translationInput)" class="add-button">Add Word</button>
     </div>
 

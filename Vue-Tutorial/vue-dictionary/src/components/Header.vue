@@ -5,7 +5,6 @@
 <template>
     <div class="topnav">
         <a class="active">New Word</a>
-        <a>Search</a>
     </div>
 </template>
 
@@ -27,6 +26,7 @@
     padding: 18px 16px;
     text-decoration: none;
     font-size: 15px;
+    border-radius: 10px;
 }
 
 .topnav a:hover {
